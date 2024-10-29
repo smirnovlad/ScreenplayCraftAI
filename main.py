@@ -2,6 +2,7 @@ from model import ExtendedModelWrapper
 from db import BiographyDatabaseManager
 from request_utils import RequestManager
 import argparse
+import time
 
 
 parser = argparse.ArgumentParser(description = "An addition program")
@@ -48,10 +49,21 @@ if __name__ == '__main__':
                 use_facts=args.use_facts,
                 use_histories=args.use_histories
             )
+            start = time.time()
+
             response = agent.get_response(request)
             print('{:_^20}\n'.format(f'SCREENPLAY'))
             print(response, end='\n')
-            # agent.reset_context()
+            agent.reset_context()
+
+            end = time.time()
+            print("Elapsed time: ", end - start)
+
+            with open("result_prompt.txt", "w", encoding="utf-8") as text_file:
+                text_file.write(request)
+
+            with open("result_script.txt", "w", encoding="utf-8") as text_file:
+                text_file.write(response)
         elif inp == 2:
             all_persons = db_manager.get_all_persons()
             for person in all_persons:
