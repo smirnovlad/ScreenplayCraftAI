@@ -54,4 +54,7 @@ python .\main.py --use_histories=1 --use_facts=1
 
 ## Results
 
-Mistral AI генерирует относительно слабые сценарии, решения OpenAI генерируют куда более качественные постановки.
+Mistral AI генерирует относительно слабые сценарии, решения OpenAI генерируют куда более качественные постановки:
+
+- Пример генерации модели mistral-large-latest: [directory](mistral-ai)
+- Пример генерации модели o1-preview: [google-drive](https://drive.google.com/drive/folders/1RxUrMG-QaTYtsRX5a2iCfbrUQzG9ajpw?usp=sharing)
