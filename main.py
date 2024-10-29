@@ -51,6 +51,7 @@ if __name__ == '__main__':
             response = agent.get_response(request)
             print('{:_^20}\n'.format(f'SCREENPLAY'))
             print(response, end='\n')
+            # agent.reset_context()
         elif inp == 2:
             all_persons = db_manager.get_all_persons()
             for person in all_persons:

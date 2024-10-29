@@ -19,7 +19,7 @@ class RequestManager:
         final_prompt = ""
 
         category_prompt = f"""
-Твоя задача - написать сценарий для сюжета фильма.
+Твоя задача - написать сценарий для сюжета фильма. Общий размер сценария должен быть не менее 10000 символов.
 Категория фильма: {self.category_name}\n
 Описание категории: {self.category_description}\n
 Целевая аудитория: {self.category_audience}\n
@@ -47,6 +47,7 @@ class RequestManager:
 
         if use_histories:
             histories = self.db_manager.get_person_histories(person_id)
+            print("histories: ", type(histories), histories)
 
             if len(histories) > 0:
                 history_prompt = """
@@ -55,11 +56,11 @@ class RequestManager:
                 """
                 for idx, history in enumerate(histories):
                     history_prompt += '{:_^20}\n'.format(f'История {idx}')
-                    history_prompt += history + '\n\n\n'
+                    history_prompt += history['history'] + '\n\n\n'
                 final_prompt += history_prompt
 
         tune_prompt = """
-Для каждой сцены пиши максимально подробный сценарий, включая также информацию о длительности сцены.
+Для каждой сцены пиши максимально подробный сценарий, включая также информацию о длительности сцены. Общий размер сценария должен быть не менее 10000 символов. Напиши полный сценарий, раскрой каждую из сцена, пусть каждая сцен будет длинной (от 4 до 8 реплик в каждой сцене), диалоги должны иметь какой-то смысл!
         """
 
         final_prompt += tune_prompt + '\n'
