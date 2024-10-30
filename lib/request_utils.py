@@ -1,5 +1,5 @@
-from db import BiographyDatabaseManager
-from category_description import (
+from .db import BiographyDatabaseManager
+from .category_description import (
     BIOGRAPGY_CATEGORY_NAME,
     BIOGRAPGY_CATEGORY_DESCRIPTION,
     BIOGRAPGY_CATEGORY_AUDIENCE
