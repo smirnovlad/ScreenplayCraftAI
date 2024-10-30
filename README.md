@@ -89,24 +89,24 @@ python .\v2_improve_scripts.py
 Вместо попыток сгенерировать полный сценарий со всеми подробностями мы решили разбить задачу на 2 части:
 
 1. Сгенерировать подробный план по сценарию через MistralAI и GPT-4 от OpenAI (пока что вручную, т.к. нет доступа к API). Планы тут:
-- [mistralai](script_outlines/mistralai/)
+    - [mistralai](script_outlines/mistralai/)
 
-  Команда для генерации плана при помощи MistralAI:
+      Команда для генерации плана при помощи MistralAI:
 
-  ```angular2html
-  python .\generate_script_plans_mistralai.py
-  ```
+      ```angular2html
+      python .\generate_script_plans_mistralai.py
+      ```
 
-- [gpt-4](script_outlines/openai/)
+    - [gpt-4](script_outlines/openai/)
 
-  Планы генерировали вручную в веб-версии агента gpt-4o от OpenAI.
+      Планы генерировали вручную в веб-версии агента gpt-4o от OpenAI.
 
 2. Сгенерировать подробное описание для каждой сцены плана с использованием MistralAI на основе планов от OpenAI
 
-Результаты: [results v3](mistralai_results/v3)
+    Результаты: [results v3](mistralai_results/v3)
 
-Команда для "обогащения" планов:
+    Команда для "обогащения" планов:
 
-```angular2html
-python .\v3_enrich_script_outlines.py
-```
+    ```angular2html
+    python .\v3_enrich_script_outlines.py
+    ```
