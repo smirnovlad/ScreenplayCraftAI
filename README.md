@@ -66,7 +66,7 @@ Mistral AI генерирует относительно слабые сцена
   
   Команда для генерации сценариев:
   ```angular2html
-  python .\v1_generate_scripts.py --use_histories=1 --use_facts=1 
+  python ./v1_generate_scripts.py --use_histories=1 --use_facts=1 
   ```
 
 
@@ -81,7 +81,7 @@ Mistral AI генерирует относительно слабые сцена
 Команда для улучшения сценариев первой версии:
 
 ```angular2html
-python .\v2_improve_scripts.py
+python ./v2_improve_scripts.py
 ```
 
 ### Attempt 3
@@ -94,7 +94,7 @@ python .\v2_improve_scripts.py
       Команда для генерации плана при помощи MistralAI:
 
       ```angular2html
-      python .\generate_script_plans_mistralai.py
+      python ./generate_script_plans_mistralai.py
       ```
 
     - [gpt-4](script_outlines/openai/)
@@ -108,5 +108,5 @@ python .\v2_improve_scripts.py
     Команда для "обогащения" планов:
 
     ```angular2html
-    python .\v3_enrich_script_outlines.py
+    python ./v3_enrich_script_outlines.py
     ```
