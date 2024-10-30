@@ -26,7 +26,7 @@
 Для запуска приложения используйте следующую команду (из корневой директории репозитория):
 
 ```angular2html
-python .\main.py --use_histories=1 --use_facts=1 
+python ./main.py --use_histories=1 --use_facts=1 
 ```
 
 где флаги use_histories и use_facts отвечают за использование/неиспользование историй и фактов о персоне в запросе.
