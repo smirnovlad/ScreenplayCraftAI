@@ -62,12 +62,12 @@ python .\main.py --use_histories=1 --use_facts=1
 
 Mistral AI генерирует относительно слабые сценарии, решения OpenAI генерируют куда более качественные постановки:
 
-- Пример генерации модели mistral-large-latest: [directory](mistral-ai)
+- Пример генерации модели mistral-large-latest: [results v1](mistral_results/v1)
 - Пример генерации модели o1-preview: [google-drive](https://drive.google.com/drive/folders/1RxUrMG-QaTYtsRX5a2iCfbrUQzG9ajpw?usp=sharing)
 
 ### Attempt 2
 
-Попробовали улучшить сценарии путём обогащения каждой из сцен отдельным запросом в мистраль: [improved_mistral_results](improved_mistral_results)
+Попробовали улучшить сценарии путём обогащения каждой из сцен отдельным запросом в мистраль: [results v2](mistral_results/v2)
 
 ### Attempt 3
 
@@ -76,4 +76,4 @@ Mistral AI генерирует относительно слабые сцена
 1. Сгенерировать подробный план по сценарию через GPT-4 от OpenAI (пока что вручную, т.к. нет доступа к API). Планы тут: [mistral](outlined_mistral) и [gpt-4](outlined_openai)
 2. Сгенерировать подробное описание для каждой сцены плана
 
-Результаты: todo
+Результаты: [results v3](mistral_results/v3)
