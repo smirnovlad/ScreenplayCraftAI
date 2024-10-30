@@ -1,6 +1,6 @@
-from model import ExtendedModelWrapper
-from db import BiographyDatabaseManager
-from request_utils import RequestManager
+from lib.model import ExtendedModelWrapper
+from lib.db import BiographyDatabaseManager
+from lib.request_utils import RequestManager
 import argparse
 import time
 
